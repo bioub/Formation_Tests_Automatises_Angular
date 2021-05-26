@@ -26,8 +26,8 @@ describe('TodoItemComponent', () => {
   it('todo input should be shown', () => {
     component.todo = 'Acheter du pain';
     fixture.detectChanges();
-    const nativeElement = fixture.debugElement.nativeElement;
-    expect(nativeElement.textContent).toContain('Acheter du pain');
+    const hostEl: HTMLElement = fixture.nativeElement;
+    expect(hostEl.textContent).toContain('Acheter du pain');
   });
 });
 

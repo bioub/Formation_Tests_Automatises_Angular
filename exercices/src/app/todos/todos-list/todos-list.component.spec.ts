@@ -24,4 +24,14 @@ describe('TodosListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show its todos input correctly', () => {
+    component.todos = ['A', 'B', 'C'];
+    fixture.detectChanges();
+
+    const hostEl: HTMLElement = fixture.nativeElement;
+    const todoItemEls = hostEl.querySelectorAll('app-todo-item');
+    expect(todoItemEls.length).toBe(3);
+    expect(todoItemEls[0].textContent).toContain('A');
+  });
 });

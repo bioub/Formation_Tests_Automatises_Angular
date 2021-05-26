@@ -23,4 +23,19 @@ describe('FormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit onAddTodo on submit', () => {
+    component.todo = 'ABC';
+
+    const spy = jasmine.createSpy();
+    component.onAddTodo.subscribe(spy);
+
+    const hostEl: HTMLElement = fixture.nativeElement;
+    // const formEl = hostEl.querySelector<HTMLFormElement>('.form-inline');
+    const formEl = hostEl.querySelector('form');
+
+    formEl.dispatchEvent(new Event('submit'));
+
+    expect(spy).toHaveBeenCalledWith('ABC');
+  });
 });
