@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './core/home/home.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
+import { HelloComponent } from './hello/hello.component';
 import { SharedModule } from './shared/shared.module';
 import { TodosModule } from './todos/todos.module';
 import { UsersModule } from './users/users.module';
@@ -23,6 +24,7 @@ export function translateLoaderFactory(http: HttpClient) {
     NotFoundComponent,
     HomeComponent,
     MenuComponent,
+    HelloComponent,
   ],
   imports: [
     BrowserModule,

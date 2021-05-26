@@ -1,21 +1,21 @@
-/*
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
-import { FormComponent } from './form.component';
+import { TodoFormComponent } from './todo-form.component';
 
 describe('FormComponent', () => {
-  let component: FormComponent;
-  let fixture: ComponentFixture<FormComponent>;
+  let component: TodoFormComponent;
+  let fixture: ComponentFixture<TodoFormComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FormComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [TodoFormComponent],
+      imports: [FormsModule]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormComponent);
+    fixture = TestBed.createComponent(TodoFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -24,4 +24,3 @@ describe('FormComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-*/

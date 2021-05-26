@@ -1,7 +1,7 @@
 export function convertToNumber(value: string) {
-  const nb = parseInt(value, 10);
+  const nb = Number.parseInt(value, 10);
 
-  if (isNaN(nb)) {
+  if (Number.isNaN(nb)) {
     throw new Error(`Erreur : "${value}" n'est pas un nombre`);
   }
 

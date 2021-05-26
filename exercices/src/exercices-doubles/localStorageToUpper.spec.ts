@@ -2,7 +2,7 @@ import { localStorageToUpper } from "./localStorageToUpper";
 
 describe('localStorageToUpper function', () => {
   it('should convert key to upper', () => {
-    spyOn(localStorage, 'getItem').and.returnValue('abc');
+    spyOn(Storage.prototype, 'getItem').and.returnValue('abc');
 
     expect(localStorageToUpper('my-key')).toBe('ABC');
 

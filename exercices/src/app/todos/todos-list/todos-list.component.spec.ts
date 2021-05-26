@@ -1,5 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { TodosListComponent } from './todos-list.component';
 
 describe('TodosListComponent', () => {
@@ -7,12 +9,10 @@ describe('TodosListComponent', () => {
   let fixture: ComponentFixture<TodosListComponent>;
 
   beforeEach(async () => {
-    TestBed.configureTestingModule({
-      declarations: [
-        TodosListComponent,
-      ]
-    })
-    .compileComponents();
+    await TestBed.configureTestingModule({
+      declarations: [TodosListComponent, TodoItemComponent],
+      imports: [CommonModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
